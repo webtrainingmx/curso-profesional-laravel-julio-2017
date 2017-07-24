@@ -1,0 +1,22 @@
+@import "variables";
+
+.b-museum {
+  border: 1px solid $laravel-border-color;
+  background-color: white;
+
+  &-information {
+    padding: 20px;
+  }
+
+  &__name {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    line-height: 1.5em;
+    border-bottom: 1px solid $laravel-border-color;
+    padding-bottom: 10px;
+  }
+
+  &__description {
+    margin-bottom: 10px;
+  }
+}
