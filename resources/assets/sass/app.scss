@@ -4,7 +4,10 @@
 
 // Variables
 @import "variables";
-@import "museums";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Custom styles
+@import "museums";
+@import "bootstrap-overrides";

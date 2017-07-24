@@ -14,9 +14,14 @@
     line-height: 1.5em;
     border-bottom: 1px solid $laravel-border-color;
     padding-bottom: 10px;
+
+    &--detail {
+      font-size: 28px;
+    }
   }
 
   &__description {
     margin-bottom: 10px;
   }
+
 }

@@ -1,26 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
-.b-museum {
-  border: 1px solid #d3e0e9;
-  background-color: white;
-}
-
-.b-museum-information {
-  padding: 20px;
-}
-
-.b-museum__name {
-  margin: 0 0 15px 0;
-  font-size: 18px;
-  line-height: 1.5em;
-  border-bottom: 1px solid #d3e0e9;
-  padding-bottom: 10px;
-}
-
-.b-museum__description {
-  margin-bottom: 10px;
-}
-
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -8369,5 +8348,34 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.b-museum {
+  border: 1px solid #d3e0e9;
+  background-color: white;
+}
+
+.b-museum-information {
+  padding: 20px;
+}
+
+.b-museum__name {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  line-height: 1.5em;
+  border-bottom: 1px solid #d3e0e9;
+  padding-bottom: 10px;
+}
+
+.b-museum__name--detail {
+  font-size: 28px;
+}
+
+.b-museum__description {
+  margin-bottom: 10px;
+}
+
+.img-thumbnail {
+  border-radius: 0;
 }
 
