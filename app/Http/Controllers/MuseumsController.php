@@ -47,7 +47,8 @@ class MuseumsController extends Controller
      */
     public function show($id)
     {
-        //
+        $museum = Museum::findOrFail($id);
+        return view("museums.show", compact('museum'));
     }
 
     /**
