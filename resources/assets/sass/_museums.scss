@@ -25,3 +25,20 @@
   }
 
 }
+
+.b-museum-reviews {
+  padding: 0 20px 20px 20px;
+
+  &__title {
+    font-size: 28px;
+    border-bottom: 1px solid $laravel-border-color;
+    padding-bottom: 10px;
+  }
+
+}
+
+.b-review {
+  &__text {
+    margin-top: 10px;
+  }
+}

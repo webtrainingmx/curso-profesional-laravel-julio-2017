@@ -8375,7 +8375,25 @@ button.close {
   margin-bottom: 10px;
 }
 
+.b-museum-reviews {
+  padding: 0 20px 20px 20px;
+}
+
+.b-museum-reviews__title {
+  font-size: 28px;
+  border-bottom: 1px solid #d3e0e9;
+  padding-bottom: 10px;
+}
+
+.b-review__text {
+  margin-top: 10px;
+}
+
 .img-thumbnail {
+  border-radius: 0;
+}
+
+.alert {
   border-radius: 0;
 }
 

@@ -7,7 +7,7 @@
                     <div class="b-museum">
                         @if( isset($museum->thumbnail) )
                             <figure class="b-museum__thumbnail">
-                                <a href="{{route("museos.show", $museum->id)}}">
+                                <a href="{{route("museums.show", $museum->id)}}">
                                     <img class="img-responsive" src="{{ $museum->thumbnail }}"
                                          alt="{{ $museum->name }}">
                                 </a>
@@ -15,7 +15,7 @@
                         @endif
 
                         <div class="b-museum-information">
-                            <a href="{{route("museos.show", $museum->id)}}">
+                            <a href="{{route("museums.show", $museum->id)}}">
                                 <h2 class="b-museum__name">
                                     {{ $museum->name }}
                                 </h2>

@@ -22,7 +22,7 @@ class CreateMuseumsTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->string('hours');
-            $table->decimal('ranking')->nullable();
+            $table->decimal('rating')->nullable();
             $table->timestamps();
         });
     }

@@ -14,26 +14,8 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
                 <div class="b-museum">
-                    <div class="b-museum-information">
-                        <h1 class="b-museum__name b-museum__name--detail">
-                            {{ $museum->name }}
-                        </h1>
-
-                        <div class="b-museum__description">
-                            {{ $museum->description }}
-                        </div>
-
-                        <div class="b-museum__hours">
-                            <strong>Hours: </strong> {{ $museum->hours }}
-                        </div>
-
-                        <div class="b-museum__phone">
-                            <strong>Phone: </strong> {{ $museum->phone }}
-                        </div>
-                        <div class="b-museum__ranking">
-                            <strong>Ranking: </strong> {{ $museum->ranking }}
-                        </div>
-                    </div>
+                    @include("museums.show-general-info")
+                    @include("museums.show-reviews")
                 </div>
 
             </div>
