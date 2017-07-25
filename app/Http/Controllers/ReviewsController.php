@@ -6,6 +6,7 @@ use App\Museum;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
 class ReviewsController extends Controller
@@ -91,7 +92,10 @@ class ReviewsController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $review = Review::findOrFail($id);
+        $museums = Museum::all();
+        return view("reviews.edit", compact('review', 'museums'));
     }
 
     /**
@@ -103,7 +107,22 @@ class ReviewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'museum_id' => 'required',
+            'rating' => 'required',
+            'text' => 'required'
+        ]);
+
+        $review = Review::findOrFail($id);
+
+
+        $review->museum_id = $request->input('museum_id');
+        $review->rating = $request->input('rating');
+        $review->text = $request->input('text');
+
+        $review->save();
+
+        return Redirect::to('/reviews');
     }
 
     /**
