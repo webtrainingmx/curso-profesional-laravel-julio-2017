@@ -3,6 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                <div class="pull-right">
+                    <a href="{{route('reviews.create')}}" class="btn btn-primary">Create review</a>
+                </div>
+
                 <div class="b-museum-reviews">
                     <h2 class="b-museum-reviews__title">My Reviews</h2>
 

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Museum;
+use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class ReviewsController extends Controller
 {
@@ -26,7 +29,8 @@ class ReviewsController extends Controller
      */
     public function create()
     {
-        //
+        $museums = Museum::all();
+        return view("reviews.create", compact('museums'));
     }
 
     /**
@@ -37,7 +41,33 @@ class ReviewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'text' => 'required'
+        ];
+
+        $messages = [
+            'text.required' => 'El campo "Your review" es obligatorio',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+
+            return redirect()->action('ReviewsController@create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $user = Auth::user();
+        $review = new Review();
+        $review->text = $request->input('text');
+        $review->museum_id = $request->input('museum_id');
+        $review->rating = $request->input('rating');
+
+        $user->reviews()->save($review);
+
+        return redirect()->action('ReviewsController@index');
+
     }
 
     /**

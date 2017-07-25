@@ -33,7 +33,7 @@
                                 <strong>Phone: </strong> {{ $museum->phone }}
                             </div>
                             <div class="b-museum__ranking">
-                                <strong>Ranking: </strong> {{ $museum->ranking }}
+                                <strong>Rating: </strong> {{ $museum->rating }}
                             </div>
                         </div>
                     </div>
