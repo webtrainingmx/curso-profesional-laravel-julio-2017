@@ -29,14 +29,22 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{--{{ config('app.name', 'Laravel') }}--}}
+                        <span class="glyphicon glyphicon-home"></span>
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li>
+                            <a href="{{url('museums')}}">Museums</a>
+                        </li>
+                        @if (! Auth::guest())
+                            <li>
+                                <a href="{{url('reviews')}}">My Reviews</a>
+                            </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -52,6 +60,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
