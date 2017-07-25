@@ -20,6 +20,7 @@
                             <div class="b-review__text alert alert-info">
                                 {{ $review->text }}
                             </div>
+                            {{ link_to_route('reviews.edit', 'Edit', $review->id) }}
                         </div>
                     @endforeach
                 </div>
