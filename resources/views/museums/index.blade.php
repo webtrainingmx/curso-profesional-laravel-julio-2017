@@ -2,8 +2,9 @@
 @section("content")
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
-                @foreach($museums as $museum)
+
+            @foreach($museums as $museum)
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
                     <div class="b-museum">
                         @if( isset($museum->thumbnail) )
                             <figure class="b-museum__thumbnail">
@@ -36,8 +37,9 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
+
         </div>
     </div>
 @endsection

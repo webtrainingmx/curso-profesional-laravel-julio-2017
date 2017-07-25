@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="{{ url('museums') }}">Museums</a>
-
+                    <a href="{{ url('reviews') }}">My Reviews</a>
                 </div>
             </div>
         </div>
