@@ -52,7 +52,7 @@ class ReviewsController extends Controller
         $validator = Validator::make($request->all(), $rules, $messages);
 
         if ($validator->fails()) {
-
+            flash('There are some missing fields, please double-check!')->error();
             return redirect()->action('ReviewsController@create')
                 ->withErrors($validator)
                 ->withInput();
@@ -65,6 +65,8 @@ class ReviewsController extends Controller
         $review->rating = $request->input('rating');
 
         $user->reviews()->save($review);
+
+        flash('Your review has been saved!')->success();
 
         return redirect()->action('ReviewsController@index');
 
