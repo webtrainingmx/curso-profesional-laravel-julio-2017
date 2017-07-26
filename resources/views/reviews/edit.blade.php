@@ -3,11 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h1>Create review</h1>
-
-                @foreach($errors as $error)
-                    <strong>Err{{$error}}</strong>
-                @endforeach
+                <h1>Edit review</h1>
 
                 {{ Form::model($review, ['method'=> 'PATCH', 'route'=> ['reviews.update', $review->id]]) }}
 
@@ -48,7 +44,6 @@
 
                     @endif
                 </div>
-
 
                 {{ Form::submit('Update', ['class' => 'btn btn-primary'])  }}
                 {!! Form::close() !!}

@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/museums', 'MuseumsController');
 
-Route::resource('/reviews', 'ReviewsController');
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('/reviews', 'ReviewsController');
+});
+

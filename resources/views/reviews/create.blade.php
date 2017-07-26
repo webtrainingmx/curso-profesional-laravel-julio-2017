@@ -5,10 +5,6 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1>Create review</h1>
 
-                @foreach($errors as $error)
-                    <strong>Err{{$error}}</strong>
-                @endforeach
-
                 {!! Form::open(['route' => 'reviews.store']) !!}
 
                 <div class="form-group{{ $errors->has('museum_id') ? ' has-error' : '' }}">
@@ -48,8 +44,7 @@
 
                     @endif
                 </div>
-
-
+                
                 {{ Form::submit('Save', ['class' => 'btn btn-primary'])  }}
                 {!! Form::close() !!}
             </div>
